@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    transition: all .5s;
+}
+html{
+    height: 100vh;
+}
+body {
+    background: linear-gradient(#0f002a, #210116);
+    height: 100vh;
+
+}
+
+article {
+    background-image: url(img/stars1.png);
+    height: 100VH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* overflow: auto; */
+    /* position: absolute; */
+}
+
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: fit-content;
+    /* overflow: auto; */
+    align-items: center;
+    transition: 0.5s;
+    /* position: absolute; */
+}
+
+.middle section {
+    text-align: center;
+    height: fit-content;
+    width: 100px;
+    padding: 15px;
+    background-color: #000189;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .5s;
+    
+
+}
+
+.middle:hover section {
+    opacity: 0;
+}
+
+.middle section:hover {
+    width: 150px;
+    /* width: fit-content; */
+    
+    
+    
+    padding: 30px;
+    background-color: #3c0128;
+    opacity: 1;
+}
+
+
+.middle section::after{
+    content: attr(data-text);
+    position: absolute;
+    transform: translateX(300px) translateY(-35px);
+    letter-spacing: 20px;
+    opacity: 0;
+    transition: .5s;
+    pointer-events: none;
+    
+}
+
+.middle section:hover::after{
+    display: inline  ;
+    /* margin-left: 250px; */
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 0 0 100px white;
+    
+}
+
+.middle .earth::before, .middle .sun::before ,.middle .mercury::before,.middle .venus::before, .middle .jupiter::before ,.middle .saturn::before, .middle .uranus::before, .middle .neptune::before{
+    content: "";
+    background-position: center;
+    background-image: url(img/earth.png);
+    background-size:cover ;
+    width: 150px;
+    height: 150px;
+    /* background-color: red; */
+    transform: translateX(-500px) translateY(-65px) ;
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+    display: none;
+}
+
+.middle section:hover::before{
+    display: inline;
+    opacity: 0.5;
+    border-radius: 50%;
+    
+}
+
+.middle .sun::before{
+    transform: translateX(-510px) translateY(-65px) ;
+    background-image:url(img/sun.png)
+}
+.middle .mercury::before{
+    transform: translateX(-485px) translateY(-65px) ;
+    background-image:url(img/mercury.png)
+}
+.middle .venus::before{
+
+    background-image:url(img/venus.png)
+}
+.middle .jupiter::before{ 
+    width: 135px;
+    height: 135px;
+    transform: translateX(-485px) translateY(-65px) ;
+    background-image:url(img/jupiter.png)
+}
+.middle .saturn::before{
+    width: 250px;
+    height: 150px;
+    background-size: cover;
+    transform: translateX(-520px) translateY(-85px) ;
+    background-image:url(img/saturn.png)
+}
+.middle .uranus::before{
+
+    background-image:url(img/uranus.png)
+}
+.middle .neptune::before{
+
+    background-image:url(img/neptun.png)
+}
+
+
+
+
